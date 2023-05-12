@@ -17,7 +17,7 @@ function SideBar() {
   })
 
   return (
-    <div className="flex flex-col px-2 overflow-y-scroll border-2 shrink-0 w-40">
+    <div className="flex flex-col p-2 overflow-y-scroll border-2 shrink-0 w-40">
       {renderedLinks}
     </div>
   )
