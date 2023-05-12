@@ -1,7 +1,12 @@
 import useNavigation from "../hooks/useNavigation"
 
 function Link({ to, children }) {
-  const { navigate } = useNavigation()
+  const { navigate, currentPath } = useNavigation()
+  let newClass = "hover:text-slate-500 px-2"
+
+  if (currentPath === to) {
+    newClass += " font-bold border-l-2"
+  }
 
   function handleClick(e) {
     e.preventDefault()
@@ -9,7 +14,7 @@ function Link({ to, children }) {
     navigate(to)
   }
   return (
-    <a className="hover:text-slate-500" onClick={handleClick} href={to}>
+    <a className={newClass} onClick={handleClick} href={to}>
       {children}
     </a>
   )
