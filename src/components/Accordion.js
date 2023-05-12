@@ -18,7 +18,7 @@ function Accordion({ items }) {
       <div key={item.content}>
         <h1
           onClick={() => handleClick(index)}
-          className="cursor-pointer bg-red-900 text-white p-2 hover:bg-red-300 hover:text-black active:bg-slate-200 flex justify-between"
+          className="cursor-pointer bg-red-800 text-white p-2 hover:bg-red-300 hover:text-black active:bg-slate-200 flex justify-between"
         >
           {item.header}
           <span>{isShown ? "-" : "+"}</span>
